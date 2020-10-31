@@ -11,6 +11,7 @@ const request = require('request')
 const geocode = require('./utils/geocode')
 const weather = require('./utils/weather')
 
+const port =process.env.PORT || 3000
 // console.log(__dirname);   Directory address
 // console.log(__filename);  File address
 //console.log(path.join(__dirname,'../public'));  directory address of index.html
@@ -131,6 +132,6 @@ app.get('*',(req,res) => {
 
 
 
-app.listen(3000 , () => {               //port name
+app.listen(port , () => {               //port name
   console.log('Server is up!');
 })
